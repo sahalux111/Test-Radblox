@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QA Dashboard</title>
+</head>
+<body>
+    <h2>QA Dashboard</h2>
+    <h3>Doctors Availability</h3>
+    <ul>
+        {% for availability in doctors_availability %}
+            <li>{{ availability.start_time }} - {{ availability.end_time }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
